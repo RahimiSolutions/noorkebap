@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { language, locale } from '$lib/i18n/i18n';
 	import { onMount } from 'svelte';
-    import '../lib/styles/fonts.css';
+	import '../lib/styles/fonts.css';
+	import Navbar from '../components/navbar/navbar.svelte';
 
 	var userLang = navigator.language;
 	// nb-NO
@@ -40,12 +41,27 @@
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </svelte:head>
 
+<Navbar />
 <slot />
 
 <style>
 	:global(*) {
 		--white: #fdfdfd;
-        font-family: 'Sfpro';
+
+		--red-200: #ffd0d7;
+		--red-300: #e44961;
+		--red-400: #b12238;
+		--red-500: #900b1f;
+		--red-600: #720919;
+
+		--black-200: #a9a9a9;
+		--black-300: #666464;
+		--black-400: #312e2e;
+		--black-500: #1f1212;
+		--black-600: #000000;
+
+
+		font-family: 'Sfpro';
 
 		/* Smallest size, suitable for small print or tags */
 		--fs-300: 12px;
@@ -56,10 +72,11 @@
 		/* Large text, good for subtitles or small headings */
 		--fs-600: 20px;
 		/* Extra large, good for titles */
-		--fs-700: 24px;
+		--fs-700: 32px;
 		/* 2X large, good for main headings */
-		--fs-800: 32px;
+		--fs-800: clamp(3rem, 1.5rem + 3.125vw, 3.5rem);
 
+		
 		/* // MOBILE */
 		/* Smallest size, suitable for small print or tags */
 		--mfs-300: 10px;

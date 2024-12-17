@@ -1,7 +1,9 @@
 <script>
 	import { goto } from '$app/navigation';
 
+	export let color = '#ffffff';
 	export let bgColor = '#000000';
+	export let fontweight = '400';
 	export let bgColorHover = '#f5f5f5';
 	export let text = 'text';
 	export let link = '';
@@ -23,6 +25,8 @@
 
 <button
 	class="button"
+	style:color={color}
+	style:font-weight={fontweight}
 	style:background-color={bgColor}
 	style:border-radius={borderRadius}
 	style:border-width={borderWidth}
@@ -36,11 +40,10 @@
 <style lang="scss">
 	button {
 		background-color: var(--red-300);
-		color: var(--white);
 		font-size: var(--fs-700);
 
 		border-radius: 100vw;
-		padding: 4px 24px;
+		padding: 8px 24px;
 		box-shadow:
 			4px 4px 12px 0 rgba(0, 0, 0, 0.25),
 			inset 2px 2px 4px rgba(255, 255, 255, 0.8);
