@@ -11,13 +11,13 @@
 
 <style lang="scss">
 	.polaroid {
-		width: 400px;
+		width: clamp(18.75rem, 11.6071rem + 11.1607vw, 25rem);
 		height: fit-content;
 
 		overflow: hidden;
 		.image-container {
-			width: 400px;
-			height: 400px;
+			width: clamp(18.75rem, 11.6071rem + 11.1607vw, 25rem);
+			height: clamp(18.75rem, 11.6071rem + 11.1607vw, 25rem);
 			position: relative;
 			img {
 				max-width: 100%;
@@ -26,8 +26,8 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 400px;
-				height: 400px;
+				width: clamp(18.75rem, 11.6071rem + 11.1607vw, 25rem);
+				height: clamp(18.75rem, 11.6071rem + 11.1607vw, 25rem);
 				border-width: 10px 10px 80px 10px;
 				border-style: solid;
 				border-color: var(--white);

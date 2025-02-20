@@ -24,42 +24,47 @@
 </script>
 
 <svelte:head>
-	<title>FILL IN TITLE</title>
+	<title>Noor Kebap</title>
 	<meta name="description" content="FILL IN DESCRIPTION" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="robots" content="index, follow" />
 	<meta name="content-language" content="en" />
 	<meta name="keywords" content="FILL IN KEYWORDS" />
-	<meta property="og:title" content="FILL IN TITLE" />
+	<meta property="og:title" content="Noor Kebap" />
 	<meta property="og:description" content="FILL IN DESCRIPTION" />
 	<meta property="og:type" content="website" />
 	<!--<meta property="og:url" content="https://www.domain.com" />
-	 <meta property="og:image" content="https://www.domain.com/images/og-image.jpg" /> 
+	 <meta property="og:image" content="https://www.domain.com/images/og-image.jpg" />-->
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />-->
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </svelte:head>
 
 <Navbar />
 <slot />
 
-<style>
+<style lang="scss">
 	:global(*) {
+		&::selection {
+			background: rgba(114, 9, 25, 1); 
+			color: #fff; 
+			text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5); /* Subtle white shadow for depth */
+		}
 		--white: #fdfdfd;
 
 		--red-200: #ffd0d7;
 		--red-300: #e44961;
 		--red-400: #b12238;
 		--red-500: #900b1f;
-		--red-600: #720919;
+		--red-600: rgb(114, 9, 25);
 
+		--black-100: #ebebeb;
 		--black-200: #a9a9a9;
 		--black-300: #666464;
 		--black-400: #312e2e;
 		--black-500: #1f1212;
 		--black-600: #000000;
-
 
 		font-family: 'Sfpro';
 
@@ -76,7 +81,6 @@
 		/* 2X large, good for main headings */
 		--fs-800: clamp(3rem, 1.5rem + 3.125vw, 3.5rem);
 
-		
 		/* // MOBILE */
 		/* Smallest size, suitable for small print or tags */
 		--mfs-300: 10px;

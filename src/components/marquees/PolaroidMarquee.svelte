@@ -1,11 +1,11 @@
 <script>
 	import Polaroid from '../cards/polaroid.svelte';
-	import shopOutside from '$lib/images/burger.jpg';
-	import shopFront from '$lib/images/pizza.png';
-	import KebabSpin from '$lib/images/kebab-spin.png'
-	import EatBurger from '$lib/images/eating-burger.png'
-	import Gelato from '$lib/images/gelato.jpg'
-	import eatingPizza from '$lib/images/eating-pizza.png'
+	import burger from '$lib/images/marquee_burger.webp';
+	import pizza from '$lib/images/marquee_pizza.webp';
+	import kebab from '$lib/images/marquee_kebab.webp';
+	import girl from '$lib/images/marquee_girl.webp';
+	import gelato from '$lib/images/marquee_gelato.webp';
+	import woman from '$lib/images/marquee_woman.webp';
 
 	let isPaused = false;
 
@@ -16,12 +16,12 @@
 
 	// Image array with alternation for positioning
 	const images = [
-		{ image: shopOutside, description: 'Description 1' },
-		{ image: KebabSpin, description: 'Description 2' },
-		{ image: shopFront, description: 'Description 3' },
-		{ image: EatBurger, description: 'Description 4' },
-		{ image: Gelato, description: 'Description 5' },
-		{ image: eatingPizza, description: 'Description 6' }
+		{ image: burger, description: 'Description 1' },
+		{ image: kebab, description: 'Description 2' },
+		{ image: pizza, description: 'Description 3' },
+		{ image: girl, description: 'Description 4' },
+		{ image: gelato, description: 'Description 5' },
+		{ image: woman, description: 'Description 6' }
 	].map((img, index) => ({
 		...img,
 		rotation: Math.random() * 10 - 5, // Random rotation between -5 and 5 degrees
