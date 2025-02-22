@@ -1,32 +1,63 @@
 <script>
 	import logo from '$lib/images/logo.png';
 	import Button from '../buttons/button.svelte';
+	import MediaQuery from '../MediaQuery/MediaQuery.svelte';
 </script>
 
-<nav>
-	<div class="logo">
-		<img src={logo} alt="Noor Kebap" />
-	</div>
-	<div class="menu-container">
-		<ul class="menu">
-			<li class="menu-item">
-				<a href="/#top">Inicio</a>
-			</li>
-			<li class="menu-item">
-				<a href="/#menú">Menú</a>
-			</li>
-			<li class="menu-item">
-				<a href="/#contacto">Contacto</a>
-			</li>
-		</ul>
-	</div>
-	<div class="cta">
-		<Button text="Pedido" borderRadius="100vw" bgColor="#e44961" fontweight="600" link="#menú" />
-	</div>
-</nav>
+<MediaQuery query="(min-width: 1024px)" let:matches>
+	{#if matches}
+		<nav class="navbar">
+			<div class="logo">
+				<img src={logo} alt="Noor Kebap" />
+			</div>
+			<div class="menu-container">
+				<ul class="menu">
+					<li class="menu-item">
+						<a href="/#top">Inicio</a>
+					</li>
+					<li class="menu-item">
+						<a href="/#menú">Menú</a>
+					</li>
+					<li class="menu-item">
+						<a href="/#contacto">Contacto</a>
+					</li>
+				</ul>
+			</div>
+			<div class="cta">
+				<Button
+					text="Pedido"
+					borderRadius="100vw"
+					bgColor="#e44961"
+					fontweight="600"
+					link="#menú"
+				/>
+			</div>
+		</nav>
+	{/if}
+</MediaQuery>
+<MediaQuery query="(max-width: 1023px)" let:matches>
+	{#if matches}
+		<nav class="mobile-navbar">
+			<div class="logo">
+				<img src={logo} alt="Noor Kebap" />
+			</div>
+			
+			<div class="cta">
+				<Button
+					text="Pedido"
+					borderRadius="100vw"
+					bgColor="#e44961"
+					fontweight="600"
+					link="#menú"
+					fontsize="var(--fs-500)"
+				/>
+			</div>
+		</nav>
+	{/if}
+</MediaQuery>
 
 <style lang="scss">
-	nav {
+	.navbar {
 		z-index: 999;
 		position: absolute;
 		display: flex;
@@ -67,6 +98,26 @@
 					}
 				}
 			}
+		}
+	}
+	.mobile-navbar {
+		z-index: 999;
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 90%;
+		max-width: 1800px;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		.logo {
+			height: 100%;
+			img {
+				height: clamp(3rem, 1.9599rem + 4.7548vw, 5rem);
+			}
+		}
+		.cta {
 		}
 	}
 </style>
