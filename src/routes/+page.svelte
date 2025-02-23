@@ -217,7 +217,7 @@
 			<section class="options">
 				<OptionsSection />
 			</section>
-			<section class="reviews">
+			<section class="reviews" id="reseñas">
 				<h2>Reseñas</h2>
 				<div class="review-container">
 					<script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -247,7 +247,7 @@
 				<div class="faq-container">
 					<FaqSection />
 				</div>
-				<p>¿todavía tienes preguntas?</p>
+				<p>¿Todavía tienes preguntas?</p>
 				<Button
 					text="llamanos"
 					bgColor="#e44961"
@@ -483,7 +483,7 @@
 		}
 	}
 	.mobile-wrapper {
-		overflow-x: hidden;
+		overflow: hidden;
 		width: 100%;
 		max-width: 2000px;
 		margin: auto;
@@ -552,7 +552,7 @@
 					}
 				}
 				.rating {
-					margin-top: 40px;
+					margin-top: 0px;
 					width: 80%;
 				}
 			}
@@ -609,7 +609,7 @@
 			}
 		}
 		.faq-section {
-			margin: 100px 0;
+			margin: 50px 0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -622,7 +622,7 @@
 			}
 			p {
 				margin: 24px 0;
-				font-size: var(--fs-700);
+				font-size: var(--fs-600);
 				font-weight: 600;
 			}
 		}

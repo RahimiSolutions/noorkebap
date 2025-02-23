@@ -69,7 +69,7 @@
 
 				<img class="food-image" src={img} alt={text} />
 			</div>
-			<h2>{text}</h2>
+			<!-- <h2>{text}</h2> -->
 		</div>
 	{/if}
 </MediaQuery>
@@ -148,8 +148,9 @@
 	}
 	.mobile-container {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		gap: 16px;
+		gap: 8px;
 		margin-top: 16px;
 		.circular-food-type {
 			display: flex;
@@ -159,8 +160,8 @@
 			position: relative;
 
 			.circle {
-				width: clamp(5.25rem, 1.8696rem + 15.4532vw, 11.75rem);
-				height: clamp(5.25rem, 1.8696rem + 15.4532vw, 11.75rem);
+				width:  clamp(5.5rem, 2.2496rem + 14.8588vw, 11.75rem);
+				height:  clamp(5.5rem, 2.2496rem + 14.8588vw, 11.75rem);
 				border-radius: 50%;
 				background: linear-gradient(var(--red-400), var(--white));
 				animation: circleRotate 5s linear infinite;
@@ -215,7 +216,7 @@
 			}
 		}
 		h2 {
-			font-size: var(--fs-700);
+			font-size: var(--fs-600);
 			color: #000;
 		}
 	}

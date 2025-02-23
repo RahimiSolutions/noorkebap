@@ -112,6 +112,7 @@
 		max-width: clamp(18.75rem, 2.4981rem + 74.2942vw, 50rem);
 		margin-top: 24px;
 		position: relative;
+		cursor: pointer;
 		img {
 			align-self: center;
 			width: 64px;

@@ -1,15 +1,22 @@
 <script>
+	import { goto } from '$app/navigation';
 	import Star from '$lib/icons/Star.svelte';
 
 	import manOne from '$lib/images/man1.png';
 	import manTwo from '$lib/images/man2.png';
 	import womanOne from '$lib/images/woman1.png';
 	import MediaQuery from '../MediaQuery/MediaQuery.svelte';
+
+	function clicked() {
+		goto('/#reseñas');
+	}
 </script>
 
 <MediaQuery query="(min-width: 1024px)" let:matches>
 	{#if matches}
-		<div class="reviews">
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div class="reviews" onclick={clicked}>
 			<div class="images">
 				<img src={womanOne} alt="Woman Reviewer profile" />
 				<img src={manOne} alt="man Reviewer profile" />
@@ -30,7 +37,9 @@
 </MediaQuery>
 <MediaQuery query="(max-width: 1023px)" let:matches>
 	{#if matches}
-		<div class="mobile-reviews">
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<div class="mobile-reviews" onclick={clicked}>
 			<div class="images">
 				<img src={womanOne} alt="Woman Reviewer profile" />
 				<img src={manOne} alt="man Reviewer profile" />

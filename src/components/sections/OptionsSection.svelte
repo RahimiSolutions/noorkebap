@@ -33,15 +33,16 @@
 		<div class="mobile-container">
 			<div class="options">
 				<div class="row">
-					<div class="banner">
-						<img src={banner} alt="Noor Kebap Restaurant | Pizzas | Hamburguesas" />
-					</div>
 					<div class="one"><CircularFoodType img={pizza} text="Pizzas" type="Pizza" /></div>
 					<div class="two"><CircularFoodType img={kebab} text="Kebaps" type="Kebab" /></div>
+
 					<div class="three"><CircularFoodType img={gelato} text="Gelatos" type="Gelato" /></div>
 					<div class="four">
 						<CircularFoodType img={burger} text="Hamburguesas" type="Burger" />
 					</div>
+				</div>
+				<div class="banner">
+					<img src={banner} alt="Noor Kebap Restaurant | Pizzas | Hamburguesas" />
 				</div>
 			</div>
 		</div>
@@ -113,21 +114,24 @@
 			flex-direction: column;
 			.row {
 				display: flex;
-				flex-direction: column;
 				position: relative;
+				justify-content: space-evenly;
 
-				.banner {
+				
+			}
+			.banner {
+				margin-top: 24px;
 					top: 0;
 					width: 100%;
 					height: 100%;
 					z-index: 5;
+					display: flex;
+					justify-content: center;
 					img {
 						width: 100%;
 						max-width: 500px;
 					}
 				}
-				
-			}
 		}
 	}
 </style>
