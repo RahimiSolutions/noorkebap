@@ -2,9 +2,9 @@
 	import { goto } from '$app/navigation';
 	import Star from '$lib/icons/Star.svelte';
 
-	import manOne from '$lib/images/man1.png';
-	import manTwo from '$lib/images/man2.png';
-	import womanOne from '$lib/images/woman1.png';
+	import manOne from '$lib/images/man1.webp';
+	import manTwo from '$lib/images/man2.webp';
+	import womanOne from '$lib/images/woman1.webp';
 	import MediaQuery from '../MediaQuery/MediaQuery.svelte';
 
 	function clicked() {

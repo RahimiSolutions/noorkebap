@@ -1,5 +1,4 @@
 <script lang="ts">
-	import pizza from '$lib/images/option_pizza.webp';
 	import Lenis from 'lenis';
 	import 'lenis/dist/lenis.css';
 	import { onDestroy, onMount } from 'svelte';
@@ -8,15 +7,16 @@
 	import wave from '$lib/images/wave.svg';
 	import PolaroidMarquee from '../components/marquees/PolaroidMarquee.svelte';
 	import Reviews from '../components/cards/reviews.svelte';
-	import MediuaQuery from '../components/MediaQuery/MediaQuery.svelte';
 	import MediaQuery from '../components/MediaQuery/MediaQuery.svelte';
 	import OptionsSection from '../components/sections/OptionsSection.svelte';
-	import MenuItem from '../components/cards/menuItem.svelte';
 	import MenuSection from '../components/sections/menuSection.svelte';
 	import FaqSection from '../components/sections/faqSection.svelte';
 	import redWave from '$lib/images/redwave.svg';
-	import geopin from '$lib/images/geopin.webp';
 	import Phone from '$lib/icons/phone.svelte';
+	import Instagram from '$lib/icons/instagram.svelte';
+	import banner from '$lib/images/noorkebap-banner.webp';
+	import shopfront from '$lib/images/shopfront.webp';
+	import shopoutside from '$lib/images/shopoutside.webp';
 
 	let lenis: Lenis | null = null;
 
@@ -55,7 +55,7 @@
 					<div class="content">
 						<div class="location-tag">
 							<div class="icon">
-								<Geo width="20" />
+								<Geo width="20" color="#720919" />
 							</div>
 							<a href="https://maps.app.goo.gl/smj5KHx4oxqAaPaj6" target="_blank"
 								><p>Noor Kebap Heladeria, Av. Gonzalez Vicen, 12, 03130</p></a
@@ -139,25 +139,40 @@
 				<img src={redWave} alt="Red Svg vector of wave" />
 				<div class="container">
 					<h2>Puedes encontrarnos aquí</h2>
-					<div class="location">
-						<lord-icon
-							src="https://cdn.lordicon.com/onmwuuox.json"
-							trigger="hover"
-							stroke="bold"
-							colors="primary:#ffffff,secondary:#ffffff"
-							style="width:48px;height:48px"
-						>
-						</lord-icon>
-						<a href="https://maps.app.goo.gl/smj5KHx4oxqAaPaj6" target="_blank">
-							<p>Noor Kebap Heladeria, Av. Gonzalez Vicen, 12, 03130</p>
-						</a>
+					<div class="content">
+						<div class="contact">
+							<div class="location">
+								<Geo width="36" strokewidth="1" />
+								<a href="https://maps.app.goo.gl/smj5KHx4oxqAaPaj6" target="_blank">
+									<p>Noor Kebap Heladeria, Av. Gonzalez Vicen, 12, 03130</p>
+								</a>
+							</div>
+							<div class="instagram">
+								<Instagram width="36" />
+								<a href="https://www.instagram.com/noorkebap/" target="_blank">
+									<p>@NoorKebap</p>
+								</a>
+							</div>
+							<div class="phone">
+								<Phone width="36" />
+								<a href="tel:+34-615-73-32-30" target="_blank">
+									<p>llamanos (10:00 - 00:00)</p>
+								</a>
+							</div>
+						</div>
+
+						<div class="images">
+							<div class="img-wrapper">
+								<img
+									class="front"
+									src={shopoutside}
+									alt="Outside sitting places Noor Kebap Heladeria"
+								/>
+								<img class="back" src={shopfront} alt="Shopfront of Noor Kebap Heladeria" />
+							</div>
+						</div>
 					</div>
-					<div class="phone">
-						<Phone width="36" />
-						<a href="tel:+34-615-73-32-30" target="_blank">
-							<p>llamanos (10:00 - 00:00)</p>
-						</a>
-					</div>
+					<img class="banner" src={banner} alt="Noor Kebap Restaurant | Pizzas | Hamburguesas" />
 				</div>
 			</div>
 		</div>
@@ -172,7 +187,7 @@
 					<div class="content">
 						<div class="location-tag">
 							<div class="icon">
-								<Geo width="20" />
+								<Geo width="20" color="#720919" />
 							</div>
 							<a href="https://maps.app.goo.gl/smj5KHx4oxqAaPaj6" target="_blank"
 								><p>Noor Kebap Heladeria, Av. Gonzalez Vicen, 12, 03130</p></a
@@ -259,27 +274,32 @@
 			</div>
 			<div class="contact-section" id="contacto">
 				<img src={redWave} alt="Red Svg vector of wave" />
+
 				<div class="container">
 					<h2>Puedes encontrarnos aquí</h2>
-					<div class="location">
-						<lord-icon
-							src="https://cdn.lordicon.com/onmwuuox.json"
-							trigger="click"
-							stroke="bold"
-							colors="primary:#ffffff,secondary:#ffffff"
-							style="width:24px;height:24px"
-						>
-						</lord-icon>
-						<a href="https://maps.app.goo.gl/smj5KHx4oxqAaPaj6" target="_blank">
-							<p>Noor Kebap Heladeria, Av. Gonzalez Vicen, 12, 03130</p>
-						</a>
+					<div class="content">
+						<div class="contact">
+							<div class="location">
+								<Geo width="24" strokewidth="1" />
+								<a href="https://maps.app.goo.gl/smj5KHx4oxqAaPaj6" target="_blank">
+									<p>Noor Kebap Heladeria, Av. Gonzalez Vicen, 12, 03130</p>
+								</a>
+							</div>
+							<div class="instagram">
+								<Instagram width="24" />
+								<a href="tel:+34-615-73-32-30" target="_blank">
+									<p>@NoorKebap</p>
+								</a>
+							</div>
+							<div class="phone">
+								<Phone width="24" />
+								<a href="tel:+34-615-73-32-30" target="_blank">
+									<p>llamanos (10:00 - 00:00)</p>
+								</a>
+							</div>
+						</div>
 					</div>
-					<div class="phone">
-						<Phone width="24" />
-						<a href="tel:+34-615-73-32-30" target="_blank">
-							<p>llamanos (10:00 - 00:00)</p>
-						</a>
-					</div>
+					<img class="banner" src={banner} alt="Noor Kebap Restaurant | Pizzas | Hamburguesas" />
 				</div>
 			</div>
 		</div>
@@ -460,24 +480,85 @@
 				align-items: center;
 				position: relative;
 				z-index: 5;
+
 				h2 {
 					text-align: center;
 					font-size: var(--fs-800);
 					font-weight: 900;
 					color: var(--white);
 				}
-				.location,
-				.phone {
+				.content {
 					display: flex;
-					align-items: center;
-					a {
-						text-decoration: none;
-						p {
-							font-size: var(--fs-600);
-							font-weight: 600;
-							color: var(--white);
+					width: 70%;
+					margin-top: 36px;
+					.contact {
+						width: 100%;
+						height: clamp(18.75rem, 11.6071rem + 11.1607vw, 25rem);
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						gap: 24px;
+						.location,
+						.instagram,
+						.phone {
+							display: flex;
+							gap: 16px;
+							align-items: center;
+							a {
+								text-decoration: none;
+								p {
+									font-size: var(--fs-600);
+									font-weight: 500;
+									color: var(--white);
+									width: 30ch;
+								}
+							}
 						}
 					}
+					.images {
+						position: relative;
+						width: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: 100%;
+						.img-wrapper {
+							position: relative;
+							height: clamp(18.75rem, 11.6071rem + 11.1607vw, 25rem);
+							.back,
+							.front {
+								border: 10px solid var(--white);
+								border-bottom: 60px solid var(--white);
+							}
+							.front {
+								top: 0;
+								left: 50%;
+								transform: translateX(-50%);
+								width: clamp(15.625rem, 8.4821rem + 11.1607vw, 21.875rem);
+								height: clamp(15.625rem, 8.4821rem + 11.1607vw, 21.875rem);
+								z-index: 1;
+							}
+							.back {
+								position: absolute;
+								z-index: 0;
+								top: -10px;
+								left: 50%;
+								transform: rotate(10deg) translateX(-25%);
+								width: clamp(15.625rem, 8.4821rem + 11.1607vw, 21.875rem);
+								height: clamp(15.625rem, 8.4821rem + 11.1607vw, 21.875rem);
+							}
+						}
+					}
+				}
+				.banner {
+					margin-top: 100px;
+					max-width: 1080px;
+					width: 80%;
+					position: relative;
+					display: flex;
+					object-fit: cover;
+					object-position: center;
 				}
 			}
 		}
@@ -631,7 +712,8 @@
 			padding-top: 120px;
 			img {
 				position: absolute;
-				top: clamp(1.25rem, 5.1504rem + -17.8306vw, -6.25rem);
+				top: clamp(2.5rem, 7.0505rem + -20.8024vw, -6.25rem);
+				left: 0;
 				width: 100%;
 				z-index: -1;
 			}
@@ -649,19 +731,34 @@
 					font-weight: 900;
 					color: var(--white);
 				}
-				.location,
-				.phone {
+				.contact {
+					margin-top: 24px;
 					display: flex;
-					align-items: center;
-					a {
-						text-decoration: none;
-						p {
-							font-size: var(--fs-400);
-							font-weight: 600;
-							color: var(--white);
+					flex-direction: column;
+					justify-content: start;
+					gap: 16px;
+					.location,
+					.instagram,
+					.phone {
+						display: flex;
+						align-items: center;
+						gap: 8px;
+						a {
+							text-decoration: none;
+							p {
+								font-size: var(--fs-400);
+								font-weight: 600;
+								color: var(--white);
+								width: 30ch;
+							}
 						}
 					}
 				}
+			}
+			.banner{
+				position: relative;
+				margin: 0 0 50px 0;
+				max-width: 500px;
 			}
 		}
 	}
