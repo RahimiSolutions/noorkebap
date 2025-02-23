@@ -215,10 +215,6 @@
 				cursor: pointer;
 			}
 		}
-		h2 {
-			font-size: var(--fs-600);
-			color: #000;
-		}
 	}
 
 	@keyframes circleRotate {

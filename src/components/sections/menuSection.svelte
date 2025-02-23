@@ -3,6 +3,10 @@
 	import MenuItem from '../cards/menuItem.svelte';
 	import { stores, filterMenu } from '$lib/stores.svelte';
 	import MediaQuery from '../MediaQuery/MediaQuery.svelte';
+	import Pizza from '$lib/icons/pizza.svelte';
+	import Kebab from '$lib/icons/kebab.svelte';
+	import Burger from '$lib/icons/burger.svelte';
+	import Gelato from '$lib/icons/gelato.svelte';
 	let menu = [
 		{
 			number: 1,
@@ -113,6 +117,8 @@
 		}
 	];
 
+	let inactivecolor: string = 'var(--red-600)';
+	let activecolor: string = 'var(--white)';
 	const itemsPerPage = 6;
 
 	const filteredMenu = $derived(
@@ -186,13 +192,13 @@
 				<button
 					class="button decrement"
 					onclick={() => changePage(stores.currentPage - 1)}
-					disabled={stores.currentPage === 1}>Previous</button
+					disabled={stores.currentPage === 1}>Previo</button
 				>
-				<span>Page {stores.currentPage} of {totalPages}</span>
+				<span>Página {stores.currentPage} de {totalPages}</span>
 				<button
 					class="button increment"
 					onclick={() => changePage(stores.currentPage + 1)}
-					disabled={stores.currentPage === totalPages}>Next</button
+					disabled={stores.currentPage === totalPages}>Próximo</button
 				>
 			</div>
 		</section>
@@ -208,7 +214,7 @@
 						checked={stores.selectedFilter === 'Pizza'}
 						onchange={() => filterMenu('Pizza')}
 					/>
-					Pizzas
+					<Pizza width={36} color={stores.selectedFilter === 'Pizza' ? activecolor : inactivecolor}/>
 				</label>
 				<label class="filter">
 					<input
@@ -216,7 +222,7 @@
 						checked={stores.selectedFilter === 'Kebab'}
 						onchange={() => filterMenu('Kebab')}
 					/>
-					Kebaps
+					<Kebab width={36} color={stores.selectedFilter === 'Kebab' ? activecolor : inactivecolor}/>
 				</label>
 				<label class="filter">
 					<input
@@ -224,7 +230,7 @@
 						checked={stores.selectedFilter === 'Burger'}
 						onchange={() => filterMenu('Burger')}
 					/>
-					Hamburguesas
+					<Burger width={36} color={stores.selectedFilter === 'Burger' ? activecolor : inactivecolor}/>
 				</label>
 				<label class="filter">
 					<input
@@ -232,7 +238,7 @@
 						checked={stores.selectedFilter === 'Gelato'}
 						onchange={() => filterMenu('Gelato')}
 					/>
-					Gelatos
+					<Gelato width={36} color={stores.selectedFilter === 'Gelato' ? activecolor : inactivecolor}/>
 				</label>
 			</div>
 
@@ -251,13 +257,13 @@
 				<button
 					class="button decrement"
 					onclick={() => changePage(stores.currentPage - 1)}
-					disabled={stores.currentPage === 1}>Previous</button
+					disabled={stores.currentPage === 1}>Previo</button
 				>
-				<span>Page {stores.currentPage} of {totalPages}</span>
+				<span>Página {stores.currentPage} de {totalPages}</span>
 				<button
 					class="button increment"
 					onclick={() => changePage(stores.currentPage + 1)}
-					disabled={stores.currentPage === totalPages}>Next</button
+					disabled={stores.currentPage === totalPages}>Próximo</button
 				>
 			</div>
 		</section>
@@ -329,8 +335,8 @@
 				background-color: var(--white);
 				box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
 				border-radius: 100vw;
-				padding: 8px 16px;
-				margin: 8px;
+				padding: 8px ;
+				margin: 4px 16px;
 				cursor: pointer;
 				font-size: var(--fs-300);
 				font-weight: 600;
