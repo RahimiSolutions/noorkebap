@@ -287,7 +287,7 @@
 							</div>
 							<div class="instagram">
 								<Instagram width="24" />
-								<a href="tel:+34-615-73-32-30" target="_blank">
+								<a href="https://www.instagram.com/noorkebap/" target="_blank">
 									<p>@NoorKebap</p>
 								</a>
 							</div>
