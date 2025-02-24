@@ -25,20 +25,20 @@
 
 <svelte:head>
 	<title>Noor Kebap</title>
-	<meta name="description" content="FILL IN DESCRIPTION" />
+	<meta name="description" content="Descubre Noor Kebap, un vibrante restaurante frente al mar en España que ofrece pizzas, kebabs, hamburguesas, platos y gelato." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="robots" content="index, follow" />
-	<meta name="content-language" content="en" />
-	<meta name="keywords" content="FILL IN KEYWORDS" />
+	<meta name="content-language" content="es_ES" />
+	<meta name="keywords" content="Noor Kebap, beachfront restaurant, Spain, takeaway, pizza, kebab, burger, gelato, beach dining, casual dining, seaside restaurant" />
 	<meta property="og:title" content="Noor Kebap" />
-	<meta property="og:description" content="FILL IN DESCRIPTION" />
+	<meta property="og:description" content="Descubre Noor Kebap, un vibrante restaurante frente al mar en España que ofrece pizzas, kebabs, hamburguesas, platos y gelato." />
 	<meta property="og:type" content="website" />
 	<!--<meta property="og:url" content="https://www.domain.com" />
 	 <meta property="og:image" content="https://www.domain.com/images/og-image.jpg" />-->
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any"/>
 </svelte:head>
 
 <Navbar />
